@@ -3,8 +3,8 @@ import React from "react";
 const ItemListContainerComponent = ({greeting}) => {
     const customStyle = {
         color: "white",
-        fontSize: "2rem",
-        margin: "auto"
+        fontSize: "2rem"
+        
     }
     
     return (
@@ -15,10 +15,3 @@ const ItemListContainerComponent = ({greeting}) => {
 };
 
 export default ItemListContainerComponent
-/* 
-return
-    (
-        <div style={customStyle}>
-        {greeting}
-        </div>
-    ); */

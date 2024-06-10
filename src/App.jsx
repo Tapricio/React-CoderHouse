@@ -1,19 +1,15 @@
-import NavBarComponent from './components/NavBarComponents/NavBarComponent'
 import React from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import ItemListContainerComponent from './components/ItemListContainerComponent/ItemListContainerComponent'
-import NavBarComponent2 from './components/NavBarComponents/NavBarComponent2'
+import MainRouter from './routes/MainRouter'
 
 function App() {
   
 
   return (    
-    <>    
-    <NavBarComponent />
+        
+    <MainRouter/>
     
-    <ItemListContainerComponent greeting="Bienvenido a PatStore" />
-    </>
   )
 }
 

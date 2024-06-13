@@ -27,14 +27,14 @@ const NavBarComponent = () => {
             <Navbar.Collapse id="basic-navbar-nav" >
               <Nav className="me-auto">
                 <Nav.Link><Link to="/" style={{color: "white", textDecoration: "none"}}>Home</Link></Nav.Link>
-                <Nav.Link href="#link">Link</Nav.Link>
-                <NavDropdown title="Dropdown" id="basic-nav-dropdown" >
+                
+                <NavDropdown title="Categorias" id="basic-nav-dropdown" >
                   {categories.map((category) => {
                     return (
                       <NavDropdown.Item key={category.slug}>
                         <Link to={`/category/${category.slug}`}>{category.name}</Link>
                       </NavDropdown.Item>
-                    )
+                    );
                   })}
                 </NavDropdown>
                 

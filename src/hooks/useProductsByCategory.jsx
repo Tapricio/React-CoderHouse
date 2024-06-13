@@ -1,5 +1,5 @@
 import React from "react";
-import { getProductByCategory } from "../services/products";
+import { getProductsByCategory } from "../services/products";
 
 export const useProductsByCategory = (category) => {
 

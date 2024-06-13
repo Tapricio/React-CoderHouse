@@ -2,6 +2,7 @@ import { faWheatAwnCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from "react-router-dom";
 
 const ItemListContainerComponent = ({products}) => {
 
@@ -17,7 +18,7 @@ const ItemListContainerComponent = ({products}) => {
                 <Card.Text>
                   {product.description}
                 </Card.Text>
-                <Button variant="primary">Ir a detalle</Button>
+                <Link to={`/item/${product.id}`}> Ir a detalle</Link>
               </Card.Body>
             </Card>
           ); 

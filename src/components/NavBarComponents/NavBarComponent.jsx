@@ -41,6 +41,8 @@ const NavBarComponent = () => {
               </Nav>
               
             </Navbar.Collapse>
+            {/* test */}
+            <Nav.Link><Link to="/PaginaPrueba">test</Link></Nav.Link>
             <CartWidgetComponent />
             
           </Container>

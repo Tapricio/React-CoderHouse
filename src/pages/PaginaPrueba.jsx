@@ -1,32 +1,34 @@
-import React, {useRef, useState} from "react"; 
-import Item from "../components/Item"
-/* import FormulaExcelRutBeneficiario from "../components/FormulaExcelComponents/FormulaExcelRutBeneficiario";
-import FormulaExcelRutUsuario from "../components/FormulaExcelComponents/FormulaExcelRutUsuario"; */
-import {FormulaExcelDescripcionCDG,FormulaExcelTrabajadorCDG,FormulaExcelRutBeneficiario2,FormulaExcelDescripcion2,FormulaExcelFecha,FormulaExcelRutBeneficiario,FormulaExcelRutUsuario, FormulaExcelEstado,FormulaExcelTexto,FormulaExcelDescripcion} from "../components/FormulaExcelComponents/FormulasExcel"
+import React, {useEffect, useState} from "react"; 
+import UserList from "../components/UsersComponent/UserList";
 
 const PaginaPrueba = () => {
     const [buttonText, setButtonText] = useState('presioname')
-    const arreglo = ['test1','test2','test 3','test 4']
-    const divRef = useRef(null)
-
-    const [estado,setEstado] = useState(0)
-
-    const handleClick = () => {
-        divRef.current.innerHTML = 'nuevo contenido'
+    const [contador, setContador] = useState(0)
+    const aumentar = () => {
+        if(stock>0){
+            setContador(contador+1)
+            setStock(stock-1)
+        }
     }
-
-    const renderCount = useRef(0);
-    const [count, setCount] = useState(0);
+    const disminuir = () => {
+        if(stock >= 0 && contador>0){
+            setContador(contador-1)
+            setStock(stock+1)
+        }
+    }
+    const [stock, setStock] = useState(10)
 
     
-    /* =SI($L$2<>"";"32996032-3";"") */
-    /* renderCount.current++; */
+
+    const mostrarUsers = (users) => {console.log(users)}
+ 
     return(
         <div>
             {/* <p>{buttonText}</p>
             <button onClick={() => setButtonText('Verde')}>Verde</button>
             <button onClick={() => setButtonText('Rojo')}>Rojo</button>
             <button onClick={() => setButtonText('Azul')}>Azul</button>
+           
             
             <div>
                 <Item array={arreglo}/>
@@ -66,7 +68,22 @@ const PaginaPrueba = () => {
 
             </div>
         
+            
+            <div>
+                <span>Item count activity</span>
+                <div>
+                    <div>Stock {stock}</div>
+                    <button onClick={disminuir}>-</button>{contador}<button onClick={aumentar}>+</button>
+                </div>
+
+            </div>
+
+            <div>
+                <h1>Lista de usuarios:</h1>
+                <UserList/>
+            </div>
         </div>
+
     )
 
 }

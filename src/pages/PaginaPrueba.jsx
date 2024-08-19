@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from "react"; 
 import UserList from "../components/UsersComponent/UserList";
+import {FormulaExcelDescripcionCDG} from "../components/FormulaExcelComponents/FormulasExcel"
+import TestComponent from "../components/ComponentsTest/TestComponent"
 
 const PaginaPrueba = () => {
     const [buttonText, setButtonText] = useState('presioname')
@@ -53,20 +55,7 @@ const PaginaPrueba = () => {
                 <button onClick={() => setEstado(prevEstado => prevEstado+1)}>actualizar estado-renderizar</button>
             </div> */}
             
-            <div>
-                
-                
-                {/* <FormulaExcelRutBeneficiario cantidad={5000}/> */}
-                {/* <FormulaExcelRutBeneficiario2 cantidad={5000}/> */}
-                {/* <FormulaExcelRutUsuario cantidad={5000}/> */}
-                {/* <FormulaExcelTexto cantidad={5000} texto={"Asistencia Club Don Guillermo"}/> */}
-                {/* <FormulaExcelDescripcion cantidad={5000}/> */}
-                {/* <FormulaExcelDescripcion2 cantidad={5000}/> */}
-                {/* <FormulaExcelFecha cantidad={5000}/> */}
-                {/* <FormulaExcelTrabajadorCDG cantidad={5000}/> */}
-                <FormulaExcelDescripcionCDG cantidad={5000}/>
-
-            </div>
+            
         
             
             <div>
@@ -81,6 +70,21 @@ const PaginaPrueba = () => {
             <div>
                 <h1>Lista de usuarios:</h1>
                 <UserList/>
+            </div>
+            <TestComponent>
+                <span>test 2</span>
+            </TestComponent>
+            <div>                
+                {/* <FormulaExcelRutBeneficiario cantidad={5000}/> */}
+                {/* <FormulaExcelRutBeneficiario2 cantidad={5000}/> */}
+                {/* <FormulaExcelRutUsuario cantidad={5000}/> */}
+                {/* <FormulaExcelTexto cantidad={5000} texto={"Asistencia Club Don Guillermo"}/> */}
+                {/* <FormulaExcelDescripcion cantidad={5000}/> */}
+                {/* <FormulaExcelDescripcion2 cantidad={5000}/> */}
+                {/* <FormulaExcelFecha cantidad={5000}/> */}
+                {/* <FormulaExcelTrabajadorCDG cantidad={5000}/> */}
+                <FormulaExcelDescripcionCDG cantidad={5000}/>
+
             </div>
         </div>
 

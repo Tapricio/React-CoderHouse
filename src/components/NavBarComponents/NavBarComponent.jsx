@@ -16,7 +16,7 @@ const NavBarComponent = () => {
     }).catch((error)=>{
       console.error(error)
     })
-  }
+  },[]
   )
     return (
         <>
@@ -43,6 +43,7 @@ const NavBarComponent = () => {
             </Navbar.Collapse>
             {/* test */}
             <Nav.Link><Link to="/PaginaPrueba">test</Link></Nav.Link>
+            <Nav.Link><Link to="/Tarea">Tarea</Link></Nav.Link>
             <CartWidgetComponent />
             
           </Container>

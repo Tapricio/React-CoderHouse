@@ -4,6 +4,7 @@ import Home from "../pages/Home"
 import Item from "../pages/Item"
 import Category from "../pages/Category"
 import PaginaPrueba from "../pages/PaginaPrueba"
+import Tarea from "../pages/Tarea"
 import NavBarComponent from "../components/NavBarComponents/NavBarComponent"
 import { useState } from "react"
 
@@ -18,6 +19,7 @@ const MainRouter = () => {
                 <Route path="/item/:id" element={<Item/>} />
                 <Route path="/category/:id" element={<Category/>} />
                 <Route path="/PaginaPrueba" element={<PaginaPrueba/>} />
+                <Route path="/Tarea" element={<Tarea/>}/>
             </Routes>    
         </BrowserRouter>
     )
